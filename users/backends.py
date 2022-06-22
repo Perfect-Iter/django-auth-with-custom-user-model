@@ -1,4 +1,4 @@
-from models import UserModel
+from .models import UserModel
 import logging
 
 

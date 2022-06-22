@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users'
+
+    'crispy_forms',
+
+    'users.apps.UsersConfig',
+    'authentication.apps.AuthenticationConfig'
 ]
 
 AUTH_USER_MODEL = "users.UserModel"  # new
@@ -58,7 +62,9 @@ ROOT_URLCONF = 'django_auth.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR /'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
